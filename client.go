@@ -34,7 +34,7 @@ type Option func(*Client)
 func New(ctx context.Context, clientID, clientSecret string, options ...Option) (*Client, error) {
 	//TODO: validate
 	if len(clientID) == 0 || len(clientSecret) == 0 {
-		return nil, ErrEmptyCredentials
+		log.Fatalf("Failed to get token: %v", ErrEmptyCredentials)
 	}
 	c := &Client{
 		HTTPClient: http.DefaultClient,
@@ -106,7 +106,7 @@ func (c *Client) fetch(ctx context.Context, gd gamedata.Gd, opts ...string) (gam
 
 	err = gamedata.Map(body, gd)
 	if err != nil {
-		return nil, err
+		return nil, fmt.Errorf("error mapping game data in %s: %w", op, err)
 	}
 
 	return gd, nil
