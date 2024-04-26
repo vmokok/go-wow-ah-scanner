@@ -1,4 +1,4 @@
-module go-wow-ah-scanner
+module github.com/vmokok/go-wow-ah-scanner
 
 go 1.22.2
 
