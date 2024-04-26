@@ -2,7 +2,7 @@ package ahsc
 
 import (
 	"context"
-	"go-wow-ah-scanner/internal/gamedata"
+	"github.com/vmokok/go-wow-ah-scanner/internal/gamedata"
 	"strconv"
 )
 

@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"go-wow-ah-scanner/internal/gamedata"
+	"github.com/vmokok/go-wow-ah-scanner/internal/gamedata"
 	"golang.org/x/oauth2"
 	"golang.org/x/oauth2/clientcredentials"
 	"io"
